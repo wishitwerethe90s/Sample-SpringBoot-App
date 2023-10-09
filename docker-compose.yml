@@ -3,7 +3,7 @@ services:
   APP:
     image: 'sample-spring-app'
     ports:
-      - "8080:8080"
+      - "8081:8080"
     depends_on:
       PostgreSQL:
         condition: service_healthy
@@ -16,7 +16,7 @@ services:
   PostgreSQL:
     image: postgres
     ports:
-      - "5432:5432"
+      - "5434:5432"
     environment:
       - POSTGRES_PASSWORD=password
       - POSTGRES_USER=postgres
